@@ -31,8 +31,10 @@ const Home:React.FC = () => {
 
     <>
       <Container maxWidth="sm">
-        <Box style={{ position: 'relative', bottom: 295 }}
+        <Box 
           sx={{
+            position: 'relative', bottom: {lg: 295 , md: 270, sm: 270, xs: 185},
+
             display: 'flex',
             width: '100%',
             alignItems: 'center',
@@ -56,8 +58,9 @@ const Home:React.FC = () => {
           <Button sx={{color: 'text.primary'}} onClick={() => addTasks()}> Add Todo </Button>
         </Box>
 
-        <Box style={{ position: 'relative', bottom: 280 }}
+        <Box 
           sx={{
+            position: 'relative', bottom: {lg: 280 , md: 260, sm: 260, xs: 160},
             width: '100%',
             alignItems: 'center',
             justifyContent: 'center',

@@ -1,6 +1,6 @@
 
 import '@/styles/globals.css'
-import { Box, Grid, IconButton, PaletteMode } from '@mui/material';
+import { Box, Grid, Hidden, IconButton, PaletteMode } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import type { AppProps } from 'next/app'
@@ -83,7 +83,7 @@ export default function App({ Component, pageProps }: AppProps) {
       
       </Head>
 
-      <Box style={{ position: 'relative', top: 0 }}>
+      <Box style={{ position: 'relative', top: 0 ,margin:0 , overflow: 'hidden'}}>
         {mode === 'dark' ? <Image
           src={headerImgDark}
           alt="Header Img"
@@ -102,7 +102,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
 
 
-      <Container maxWidth="sm" style={{ position: 'relative', bottom: 270, left: 5 }}>
+      <Container maxWidth="sm" sx={{
+            position: 'relative',left: 5, bottom: {lg: 270 , md: 260 , sm: 240, xs: 150}, }}>
         <Grid container spacing={0.5} minHeight={160} >
           <Grid item sm display="flex" justifyContent="left" alignItems="center">
             <Typography sx={{ display: 'inline', fontSize: 36, textAlign: 'left', letterSpacing: 8, fontFamily: 'Almarai', color: 'white' }}> TODO </Typography>
